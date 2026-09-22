@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"example.com/greetings"
+	"../greetings"
 )
 
 func main() {
