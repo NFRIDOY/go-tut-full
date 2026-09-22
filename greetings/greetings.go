@@ -74,7 +74,7 @@ import (
 	"math/rand"
 )
 
-// Hello returns a greeting for the named person.
+// Hello returns a greeting for the named person. // TEST PASSED CODE
 func Hello(name string) (string, error) {
 	// If no name was given, return an error with a message.
 	if name == "" {
@@ -84,6 +84,18 @@ func Hello(name string) (string, error) {
 	message := fmt.Sprintf(randomFormat(), name)
 	return message, nil
 }
+
+// Hello returns a greeting for the named person. // TEST FAILED CODE
+// func Hello(name string) (string, error) {
+// 	// If no name was given, return an error with a message.
+// 	if name == "" {
+// 		return name, errors.New("empty name")
+// 	}
+// 	// Create a message using a random format.
+// 	// message := fmt.Sprintf(randomFormat(), name)
+// 	message := fmt.Sprint(randomFormat())
+// 	return message, nil
+// }
 
 // Hellos returns a map that associates each of the named people
 // with a greeting message.
